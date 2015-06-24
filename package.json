@@ -12,6 +12,7 @@
     "mocha": "^2.2.5"
   },
   "testling": {
+    "harness": "mocha-bdd",
     "files": "test/**/*Test.js",
     "browsers": [
       "ie/6..latest",
