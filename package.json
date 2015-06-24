@@ -1,0 +1,19 @@
+{
+  "name": "error-subclass",
+  "version": "0.0.0",
+  "description": "Extendable Error Class",
+  "main": "ErrorSubclass.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^5.6.5",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel/register"
+  },
+  "author": "Stephen Sorensen <shuoink@gmail.com> (http://www.stephenjohnsorensen.com/)",
+  "license": "MIT"
+}
