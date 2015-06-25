@@ -9,8 +9,7 @@ class ErrorSubclass extends Error {
 
     if (Error.captureStackTrace) {
       Error.captureStackTrace(this, this.constructor);
-    }
-    else {
+    } else {
       Object.defineProperty(this, 'stack', {
         value: (new Error()).stack
       });
@@ -21,11 +20,11 @@ class ErrorSubclass extends Error {
     });
   }
 
-  get name() {
+  get name () {
     return this.constructor.name;
   }
 
-  toString() {
+  toString () {
     return this.name + ': ' + this.message;
   }
 
