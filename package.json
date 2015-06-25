@@ -3,9 +3,6 @@
   "version": "0.0.0",
   "description": "Extendable Error Class",
   "main": "ErrorSubclass.js",
-  "directories": {
-    "test": "test"
-  },
   "dependencies": {},
   "devDependencies": {
     "babel": "^5.6.5",
