@@ -3,3 +3,4 @@ npm-debug.*
 .DS_Store
 umd.js
 es6.js
+coverage
