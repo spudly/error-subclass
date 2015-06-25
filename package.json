@@ -30,5 +30,9 @@
     "esnext": true
   },
   "author": "Stephen Sorensen <shuoink@gmail.com> (http://www.stephenjohnsorensen.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spudly/error-subclass.git"
+  }
 }
