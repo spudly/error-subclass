@@ -2,7 +2,7 @@
   "name": "error-subclass",
   "version": "0.0.0",
   "description": "Extendable Error Class",
-  "main": "ErrorSubclass.js",
+  "main": "umd.js",
   "dependencies": {},
   "devDependencies": {
     "babel": "^5.6.5",
@@ -27,7 +27,11 @@
     ]
   },
   "scripts": {
-    "test": "mocha --compilers js:babel/register"
+    "test": "mocha --compilers js:babel/register",
+    "build-umd": "browserify src/ErrorSubclass.js > umd.js --standalone ErrorSubclass",
+    "build-es6": "cp src/ErrorSubclass.js es6.js",
+    "build": "npm run build-umd && npm run build-es6",
+    "prepublish": "npm run build"
   },
   "author": "Stephen Sorensen <shuoink@gmail.com> (http://www.stephenjohnsorensen.com/)",
   "license": "MIT"
