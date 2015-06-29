@@ -8,7 +8,7 @@ other things so that you don't have to worry about it.
 
 ## All the Badges...
 
-[![NPM](https://nodei.co/npm/error-subclass.png)](https://nodei.co/npm/error-subclass/)
+[![NPM](https://nodei.co/npm/error-subclass.png)](https://www.npmjs.com/package/error-subclass)
 
 [![Build Status](https://travis-ci.org/spudly/error-subclass.svg?branch=master)](https://travis-ci.org/spudly/error-subclass) [![Test Coverage](https://codeclimate.com/github/spudly/error-subclass/badges/coverage.svg)](https://codeclimate.com/github/spudly/error-subclass/coverage)
 
