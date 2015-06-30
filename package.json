@@ -1,6 +1,6 @@
 {
   "name": "error-subclass",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Extendable Error Class",
   "main": "umd.js",
   "dependencies": {},
