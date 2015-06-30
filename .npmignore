@@ -1,0 +1,7 @@
+coverage
+.git
+.travis.yml
+npm-debug.*
+.DS_Store
+src
+test
