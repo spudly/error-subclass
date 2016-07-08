@@ -3,11 +3,6 @@ node_js:
   - "0.12"
   - "0.11"
   - "0.10"
-  - "iojs"
-before_install:
-  - npm install -g mocha browserify jshint semistandard codeclimate-test-reporter istanbul
-addons:
-  code_climate:
-    repo_token: 578b930e0560acd6a8a5f12094ca1089fc89deb6a9d944fda68220ba90fdc4aa
-after_script:
-  - codeclimate < coverage/lcov.info
+  - "4"
+  - "5"
+  - "6"

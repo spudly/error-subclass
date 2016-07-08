@@ -11,12 +11,6 @@ var tests = {
 
   ErrorSubclass: {
 
-    'can\'t be directly instantiated': function () {
-      throws(function () {
-        instance = new ErrorSubclass(ERROR_MESSAGE);
-      });
-    },
-
     'Subclass of ErrorSubclass': {
 
       'can be instantiated': function () {
@@ -29,6 +23,11 @@ var tests = {
 
         before: function () {
           instance = new SubSubError(ERROR_MESSAGE);
+        },
+
+        'should be instanceof Error': function () {
+          ok(instance instanceof Error);
+          ok(instance instanceof SubSubError);
         },
 
         'should have a name': function () {
