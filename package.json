@@ -5,13 +5,13 @@
   "main": "umd.js",
   "dependencies": {},
   "devDependencies": {
-    "babel": "^5.6.5",
-    "babelify": "^6.1.2",
-    "codeclimate-test-reporter": "0.0.4",
-    "istanbul": "^0.3.16",
+    "babel": "^6.5.2",
+    "babelify": "^7.3.0",
+    "codeclimate-test-reporter": "0.3.3",
+    "istanbul": "^0.4.4",
     "jshint": "^2.8.0",
     "mocha": "^2.2.5",
-    "semistandard": "^6.1.1"
+    "semistandard": "^8.0.0"
   },
   "browserify": {
     "transform": [
