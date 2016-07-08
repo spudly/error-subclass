@@ -3,3 +3,4 @@ npm-debug.*
 .DS_Store
 umd.js
 coverage
+.nyc_output

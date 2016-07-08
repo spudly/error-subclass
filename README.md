@@ -7,9 +7,9 @@ other things so that you don't have to worry about it. Create a class that
 inherits from it and you're good to go.
 
 * instanceof Error
-* instanceof <your subclass>
+* instanceof &lt;your subclass&gt;
 * stack traces
-* .name === <name of subclass>
+* .name === &lt;name of subclass&gt;
 * .toString()
 
 ## All the Badges...
