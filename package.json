@@ -1,6 +1,6 @@
 {
   "name": "error-subclass",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Extendable Error Class",
   "main": "umd.js",
   "devDependencies": {
@@ -33,5 +33,7 @@
     "type": "git",
     "url": "https://github.com/spudly/error-subclass.git"
   },
-  "files": ["umd.js"]
+  "files": [
+    "umd.js"
+  ]
 }
