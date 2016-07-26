@@ -9,7 +9,7 @@ function ErrorSubclass(message) {
     });
   }
 
-  Object.defineProperty(this, 'message', { value: message });
+  Object.defineProperty(this, 'message', {value: message});
 }
 
 ErrorSubclass.prototype = Object.create(Error.prototype, {
