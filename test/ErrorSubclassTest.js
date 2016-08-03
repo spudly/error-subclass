@@ -1,5 +1,5 @@
+import {doesNotThrow, equal, ok} from 'assert';
 import ErrorSubclass from '../src/ErrorSubclass';
-import {ok, equal, doesNotThrow} from 'assert';
 
 const ERROR_MESSAGE = '__MESSAGE__';
 
