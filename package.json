@@ -10,7 +10,7 @@
     "browserify": "^13.0.1",
     "mocha": "^3.0.1",
     "nyc": "^8.1.0",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "^6.3.2"
   },
   "babel": {
     "presets": [
