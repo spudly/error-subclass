@@ -3,13 +3,13 @@
   "description": "Extendable Error Class",
   "main": "umd.js",
   "devDependencies": {
-    "@spudly/eslint-config": "^3.0.0",
+    "@spudly/eslint-config": "^4.0.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-register": "^6.11.6",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
     "mocha": "^3.0.1",
-    "nyc": "^8.1.0",
+    "nyc": "^10.0.0",
     "semantic-release": "^6.3.2"
   },
   "babel": {
