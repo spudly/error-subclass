@@ -10,8 +10,8 @@
     "browserify": "^14.0.0",
     "eslint": "^3.18.0",
     "mocha": "^3.0.1",
-    "semantic-release": "^6.3.2",
-    "nyc": "^9.0.1"
+    "nyc": "^10.0.0",
+    "semantic-release": "^6.3.2"
   },
   "babel": {
     "presets": [
