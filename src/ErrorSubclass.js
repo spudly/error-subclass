@@ -1,24 +1,24 @@
 /* eslint-disable prefer-reflect */
 
-const ErrorSubclass = function ErrorSubclass(message) {
-  Error.call(this, message);
+const ErrorSubclass = function ErrorSubclass(...args) {
+  const [message] = args;
+  const _error = Error.apply(this, args);
+
+  Object.defineProperty(this, 'message', {value: message});
+  Object.defineProperty(this, 'name', {value: this.constructor.name});
 
   if (Error.captureStackTrace) {
     Error.captureStackTrace(this, this.constructor);
   } else {
-    Object.defineProperty(this, 'stack', {value: (new Error()).stack});
+    Object.defineProperty(this, 'stack', {
+      get() {
+        return _error.stack;
+      }
+    });
   }
-
-  Object.defineProperty(this, 'message', {value: message});
 };
 
-ErrorSubclass.prototype = Object.create(Error.prototype, {
-  name: {
-    get() {
-      return this.constructor.name;
-    },
-  },
-});
+ErrorSubclass.prototype = Error.prototype;
 
 ErrorSubclass.prototype.toString = function toString() {
   return `${this.name}: ${this.message}`;
