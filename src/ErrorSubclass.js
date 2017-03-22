@@ -5,7 +5,9 @@ const ErrorSubclass = function ErrorSubclass(...args) {
   const _error = Error.apply(this, args);
 
   Object.defineProperty(this, 'message', {value: message});
-  Object.defineProperty(this, 'name', {value: this.constructor.name});
+  Object.defineProperty(this, 'name', {
+    value: this.constructor.displayName || this.constructor.name,
+  });
 
   if (Error.captureStackTrace) {
     Error.captureStackTrace(this, this.constructor);

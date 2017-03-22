@@ -25,6 +25,8 @@ import ErrorSubclass from 'error-subclass';
 
 class MyError extends ErrorSubclass {
 
+  static displayName = 'MyError'; // optional. survives minification
+
   // Add extra properties/methods if desired:
 
   get code() {

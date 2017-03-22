@@ -3,7 +3,9 @@ import ErrorSubclass from '../src/ErrorSubclass';
 
 const ERROR_MESSAGE = '__MESSAGE__';
 
-class SubSubError extends ErrorSubclass {}
+class SubSubError extends ErrorSubclass {
+  static displayName = 'SubSubErrorDisplayName';
+}
 
 const {captureStackTrace} = Error;
 
@@ -29,9 +31,9 @@ const tests = {
           ok(instance instanceof SubSubError);
         },
 
-        'should have a name': () => {
+        'should have a name that matches the displayName': () => {
           const instance = new SubSubError(ERROR_MESSAGE);
-          equal(instance.name, 'SubSubError');
+          equal(instance.name, 'SubSubErrorDisplayName');
         },
 
         'should have a message': () => {
@@ -42,7 +44,7 @@ const tests = {
         'has a toString() method': () => {
           const instance = new SubSubError(ERROR_MESSAGE);
           equal(typeof instance.toString, 'function');
-          equal(instance.toString(), `SubSubError: ${ERROR_MESSAGE}`);
+          equal(instance.toString(), `SubSubErrorDisplayName: ${ERROR_MESSAGE}`);
         },
 
         'when captureStackTrace is supported, should have a stack': () => {
@@ -50,7 +52,7 @@ const tests = {
           const instance = new SubSubError(ERROR_MESSAGE);
           ok(instance.stack);
           equal(typeof instance.stack, 'string');
-          ok(instance.stack.match(`SubSubError: ${ERROR_MESSAGE}`));
+          ok(instance.stack.match(`SubSubErrorDisplayName: ${ERROR_MESSAGE}`));
         },
 
         // 'when captureStackTrace is not supported, should have a stack': () => {
