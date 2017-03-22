@@ -5,7 +5,7 @@ const ERROR_MESSAGE = '__MESSAGE__';
 
 class SubSubError extends ErrorSubclass {}
 
-const captureStackTrace = Error.captureStackTrace;
+const {captureStackTrace} = Error;
 
 const tests = {
 
