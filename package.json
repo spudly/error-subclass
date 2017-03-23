@@ -10,8 +10,11 @@
     "babelify": "^7.3.0",
     "browserify": "^14.0.0",
     "eslint": "^3.18.0",
+    "husky": "^0.13.2",
+    "lint-staged": "^3.4.0",
     "mocha": "^3.0.1",
     "nyc": "^10.0.0",
+    "prettier": "^0.22.0",
     "semantic-release": "^6.3.2"
   },
   "babel": {
@@ -24,9 +27,10 @@
     "test": "npm run lint && npm run test-only",
     "test-only": "nyc --require babel-register mocha -u exports",
     "build": "browserify -t [ babelify --presets [ es2015 ] ] src/ErrorSubclass.js --standalone ErrorSubclass > umd.js",
-    "lint": "eslint src test",
+    "lint": "eslint src",
     "prepublish": "npm run build",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "precommit": "lint-staged"
   },
   "author": "Stephen Sorensen <shuoink@gmail.com> (http://www.stephenjohnsorensen.com/)",
   "license": "MIT",
@@ -39,5 +43,12 @@
   ],
   "eslintConfig": {
     "extends": "@spudly"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write --print-width=100 --single-quote --bracket-spacing=false 'src/**/*.js'",
+      "git add"
+    ]
   }
 }

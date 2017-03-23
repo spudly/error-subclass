@@ -10,17 +10,13 @@ class SubSubError extends ErrorSubclass {
 const {captureStackTrace} = Error;
 
 const tests = {
-
   ErrorSubclass: {
-
     'Subclass of ErrorSubclass': {
-
       'can be instantiated': () => {
         doesNotThrow(() => new SubSubError(ERROR_MESSAGE));
       },
 
       'SubSubclass instance': {
-
         afterEach() {
           Error.captureStackTrace = captureStackTrace;
         },
@@ -53,14 +49,14 @@ const tests = {
           ok(instance.stack);
           equal(typeof instance.stack, 'string');
           ok(instance.stack.match(`SubSubErrorDisplayName: ${ERROR_MESSAGE}`));
-        },
+        }
 
         // 'when captureStackTrace is not supported, should have a stack': () => {
         //   // TODO: how to test?
         // },
-      },
-    },
-  },
+      }
+    }
+  }
 };
 
 export default tests;
