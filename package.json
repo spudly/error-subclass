@@ -11,7 +11,7 @@
     "eslint": "^3.18.0",
     "husky": "^0.14.0",
     "jest": "^19.0.2",
-    "lint-staged": "^4.0.0",
+    "lint-staged": "^10.0.4",
     "prettier": "^1.0.0",
     "semantic-release": "^7.0.1"
   },
